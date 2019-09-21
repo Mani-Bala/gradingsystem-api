@@ -8,61 +8,61 @@
   	<servlet-name>AdminLoginServlet</servlet-name>
   	<display-name>AdminLoginServlet</display-name>
   	<description></description>
-  	<servlet-class>com.revature.gradingsystem.controller.AdminLoginServlet</servlet-class>
+  	<servlet-class>com.revature.gradingsystem.servlet.AdminLoginServlet</servlet-class>
   </servlet>
   <servlet>
   	<servlet-name>StudentByGradeServlet</servlet-name>
   	<display-name>StudentByGradeServlet</display-name>
   	<description></description>
-  	<servlet-class>com.revature.gradingsystem.controller.StudentByGradeServlet</servlet-class>
+  	<servlet-class>com.revature.gradingsystem.servlet.StudentByGradeServlet</servlet-class>
   </servlet>
   <servlet>
   	<servlet-name>SubjectWiseRankServlet</servlet-name>
   	<display-name>SubjectWiseRankServlet</display-name>
   	<description></description>
-  	<servlet-class>com.revature.gradingsystem.controller.SubjectWiseRankServlet</servlet-class>
+  	<servlet-class>com.revature.gradingsystem.servlet.SubjectWiseRankServlet</servlet-class>
   </servlet>
   <servlet>
   	<servlet-name>UserLoginServlet</servlet-name>
   	<display-name>UserLoginServlet</display-name>
   	<description></description>
-  	<servlet-class>com.revature.gradingsystem.controller.UserLoginServlet</servlet-class>
+  	<servlet-class>com.revature.gradingsystem.servlet.UserLoginServlet</servlet-class>
   </servlet>
   <servlet>
   	<servlet-name>ViewScoreRangeServlet</servlet-name>
   	<display-name>ViewScoreRangeServlet</display-name>
   	<description></description>
-  	<servlet-class>com.revature.gradingsystem.controller.ViewScoreRangeServlet</servlet-class>
+  	<servlet-class>com.revature.gradingsystem.servlet.ViewScoreRangeServlet</servlet-class>
   </servlet>
   <servlet>
   	<servlet-name>DefineScoreRangeServlet</servlet-name>
   	<display-name>DefineScoreRangeServlet</display-name>
   	<description></description>
-  	<servlet-class>com.revature.gradingsystem.controller.DefineScoreRangeServlet</servlet-class>
+  	<servlet-class>com.revature.gradingsystem.servlet.DefineScoreRangeServlet</servlet-class>
   </servlet>
   <servlet>
   	<servlet-name>DeleteScoreRangeServlet</servlet-name>
   	<display-name>DeleteScoreRangeServlet</display-name>
   	<description></description>
-  	<servlet-class>com.revature.gradingsystem.controller.DeleteScoreRangeServlet</servlet-class>
+  	<servlet-class>com.revature.gradingsystem.servlet.DeleteScoreRangeServlet</servlet-class>
   </servlet>
   <servlet>
   	<servlet-name>StudentResultServlet</servlet-name>
   	<display-name>StudentResultServlet</display-name>
   	<description></description>
-  	<servlet-class>com.revature.gradingsystem.controller.StudentResultServlet</servlet-class>
+  	<servlet-class>com.revature.gradingsystem.servlet.StudentResultServlet</servlet-class>
   </servlet>
   <servlet>
   	<servlet-name>UpdateMarkServlet</servlet-name>
   	<display-name>UpdateMarkServlet</display-name>
   	<description></description>
-  	<servlet-class>com.revature.gradingsystem.controller.UpdateMarkServlet</servlet-class>
+  	<servlet-class>com.revature.gradingsystem.servlet.UpdateMarkServlet</servlet-class>
   </servlet>
   <servlet>
   	<servlet-name>GradeWiseListServlet</servlet-name>
   	<display-name>GradeWiseListServlet</display-name>
   	<description></description>
-  	<servlet-class>com.revature.gradingsystem.controller.GradeWiseListServlet</servlet-class>
+  	<servlet-class>com.revature.gradingsystem.servlet.GradeWiseListServlet</servlet-class>
   </servlet>
   <servlet-mapping>
   	<servlet-name>AdminLoginServlet</servlet-name>
