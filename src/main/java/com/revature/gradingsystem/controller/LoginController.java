@@ -20,7 +20,7 @@ public class LoginController {
 		String errMessage = "";
 		
 		try {
-			uservalidator1.Login(name, password);
+			uservalidator1.userInput(name, password);
 			userdetail = userservice.userLogin(name, password);
 		} catch (ValidatorException e) {
 			errMessage = e.getMessage();
@@ -50,7 +50,7 @@ public class LoginController {
 		String errMessage = "";
 		
 		try {
-			uservalidator.Login(name, password);
+			uservalidator.userInput(name, password);
 			userdetail = adminService.adminLogin(name, password);
 		} catch (ValidatorException e) {
 			errMessage = e.getMessage();

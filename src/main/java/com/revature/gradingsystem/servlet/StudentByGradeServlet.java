@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.revature.gradingsystem.dto.StudentGradeDTO;
+import com.revature.gradingsystem.exception.DBException;
 import com.revature.gradingsystem.exception.ServiceException;
 import com.revature.gradingsystem.exception.ValidatorException;
 import com.revature.gradingsystem.service.UserFeatureService;
@@ -46,6 +47,8 @@ public class StudentByGradeServlet extends HttpServlet {
 			errorMessage = e.getMessage();
 
 		} catch (ValidatorException e) {
+			errorMessage = e.getMessage();
+		}catch (DBException e) {
 			errorMessage = e.getMessage();
 		}
 

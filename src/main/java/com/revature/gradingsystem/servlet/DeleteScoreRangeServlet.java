@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.revature.gradingsystem.exception.ServiceException;
 import com.revature.gradingsystem.service.AdminService;
 
 /**
@@ -14,15 +15,15 @@ import com.revature.gradingsystem.service.AdminService;
 public class DeleteScoreRangeServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		
 		AdminService adminservice = new AdminService();
-		adminservice.deleteScoreRangeService();
+		try {
+			adminservice.deleteScoreRangeService();
+		} catch (ServiceException e) {
+			e.printStackTrace();
+		}
 		
-	}
-
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
 	}
 
 }
