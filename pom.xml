@@ -45,8 +45,8 @@
 		</dependency>
 		<dependency>
 			<groupId>com.revature.gradingsystem</groupId>
-			<artifactId>gradingsytem-core</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			  <artifactId>gradingsytem-core</artifactId>
+			  <version>0.0.1-SNAPSHOT</version>
 		</dependency>
 
 	</dependencies>

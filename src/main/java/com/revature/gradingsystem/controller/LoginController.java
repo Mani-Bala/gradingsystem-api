@@ -53,8 +53,10 @@ public class LoginController {
 			uservalidator.userInput(name, password);
 			userdetail = adminService.adminLogin(name, password);
 		} catch (ValidatorException e) {
+			e.printStackTrace();
 			errMessage = e.getMessage();
 		} catch (ServiceException e) {
+			e.printStackTrace();
 			errMessage = e.getMessage();
 		}
 		

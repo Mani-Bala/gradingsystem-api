@@ -11,8 +11,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
-import com.revature.gradingsystem.dto.StudentMarkDTO;
 import com.revature.gradingsystem.exception.ServiceException;
+import com.revature.gradingsystem.model.StudentMark;
 import com.revature.gradingsystem.service.UserFeatureService;
 
 /**
@@ -29,7 +29,7 @@ public class SubjectWiseRankServlet extends HttpServlet {
 		System.out.println("Subject :" + subCode);
 
 		// call DAO
-		List<StudentMarkDTO> list = null;
+		List<StudentMark> list = null;
 		String errorMessage = "";
 		String status = "";
 		try {
@@ -45,6 +45,7 @@ public class SubjectWiseRankServlet extends HttpServlet {
 			// convert list to json
 			Gson gson = new Gson();
 			json = gson.toJson(list);
+			System.out.println(list);
 		} else {
 			JsonObject obj = new JsonObject();
 			obj.addProperty("errMessage", errorMessage);
@@ -54,12 +55,13 @@ public class SubjectWiseRankServlet extends HttpServlet {
 		// write the json as a response
 		PrintWriter out = response.getWriter();
 		out.write(json);
+		System.out.println(out);
 		out.flush();
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		doGet(request, response);
+		//doGet(request, response);
 	}
 
 }

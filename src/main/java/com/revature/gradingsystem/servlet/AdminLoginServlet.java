@@ -16,7 +16,7 @@ import com.revature.gradingsystem.controller.LoginController;
 public class AdminLoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
 		String name = request.getParameter("username");
 		String password = request.getParameter("password");
@@ -29,5 +29,8 @@ public class AdminLoginServlet extends HttpServlet {
 		out.flush();
 	}
 
-
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		 doGet(request, response);
+	}
 }
