@@ -22,14 +22,12 @@ public class LoginController {
 		try {
 			uservalidator1.userInput(name, password);
 			userdetail = userservice.userLogin(name, password);
-		}catch (ValidatorException e) {
-			e.printStackTrace();
+		} catch (ValidatorException e) {
 			errMessage = e.getMessage();
 		} catch (ServiceException e) {
-			e.printStackTrace();
 			errMessage = e.getMessage();
 		}
-		
+		//prepare JSON obj
 		String json = null;
 		Gson gson = new Gson();
 		if(userdetail != null)
