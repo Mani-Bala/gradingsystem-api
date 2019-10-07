@@ -23,7 +23,7 @@ public class DeleteScoreRangeServlet extends HttpServlet {
 		String status = "";
 		try {
 			adminservice.deleteScoreRangeService();
-			status = "Score Range Deleted..";
+			status = "success";
 		} catch (DBException e) {
 			status= e.getMessage();
 		}

@@ -9,7 +9,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.google.gson.JsonObject;
-import com.revature.gradingsystem.exception.DBException;
 import com.revature.gradingsystem.exception.ServiceException;
 import com.revature.gradingsystem.exception.ValidatorException;
 import com.revature.gradingsystem.service.AdminService;
@@ -42,9 +41,6 @@ public class DefineScoreRangeServlet extends HttpServlet {
 			errorMessage = e.getMessage();
 		} catch (ValidatorException e) {
 			errorMessage = e.getMessage();
-		}catch (DBException e) {
-			errorMessage = e.getMessage();
-
 		}
 
 		String json = null;

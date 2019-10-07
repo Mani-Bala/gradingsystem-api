@@ -13,7 +13,7 @@ import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.revature.gradingsystem.dto.StudentGradeDTO;
 import com.revature.gradingsystem.exception.ServiceException;
-import com.revature.gradingsystem.service.UserFeatureService;
+import com.revature.gradingsystem.service.UserService;
 
 /**
  * Servlet implementation class GradeWiseListServlet
@@ -29,7 +29,7 @@ public class GradeWiseListServlet extends HttpServlet {
 		String status = "";
 
 		try {
-			list = new UserFeatureService().listOfStudentService();
+			list = new UserService().listOfStudentService();
 			status = "success";
 		} catch (ServiceException e) {
 			errorMessage = e.getMessage();

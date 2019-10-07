@@ -15,7 +15,7 @@ import com.revature.gradingsystem.dto.StudentGradeDTO;
 import com.revature.gradingsystem.exception.DBException;
 import com.revature.gradingsystem.exception.ServiceException;
 import com.revature.gradingsystem.exception.ValidatorException;
-import com.revature.gradingsystem.service.UserFeatureService;
+import com.revature.gradingsystem.service.UserService;
 import com.revature.gradingsystem.validator.GradeValidator;
 
 public class StudentByGradeServlet extends HttpServlet {
@@ -39,7 +39,7 @@ public class StudentByGradeServlet extends HttpServlet {
 			gradeValidator.gradeCheck(grade.toUpperCase());
 
 			// call Service class and get the result
-			list = new UserFeatureService().findByGradeService(grade.toUpperCase());
+			list = new UserService().findByGradeService(grade.toUpperCase());
 
 			status = "success";
 

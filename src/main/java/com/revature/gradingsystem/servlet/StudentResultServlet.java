@@ -13,7 +13,7 @@ import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.revature.gradingsystem.dto.StudentGradeDTO;
 import com.revature.gradingsystem.model.StudentMark;
-import com.revature.gradingsystem.service.UserFeatureService;
+import com.revature.gradingsystem.service.UserService;
 import com.revature.gradingsystem.validator.StudentValidator;
 
 public class StudentResultServlet extends HttpServlet {
@@ -39,10 +39,10 @@ public class StudentResultServlet extends HttpServlet {
 					studentValidate.isRegnoExistService(regno);
 					
 					//get the StudentName, Average, Grade
-					studentResult = new UserFeatureService().getStudentResult(regno);
+					studentResult = new UserService().getStudentResult(regno);
 					
 					//get the Marks and Sub-Code
-					markList = new UserFeatureService().getStudentMarks(regno);
+					markList = new UserService().getStudentMarks(regno);
 					
 					Gson gson = new Gson();
 					String json1 = gson.toJson(markList);

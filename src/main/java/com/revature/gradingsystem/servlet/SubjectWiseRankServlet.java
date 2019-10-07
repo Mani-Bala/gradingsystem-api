@@ -13,7 +13,7 @@ import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.revature.gradingsystem.exception.ServiceException;
 import com.revature.gradingsystem.model.StudentMark;
-import com.revature.gradingsystem.service.UserFeatureService;
+import com.revature.gradingsystem.service.UserService;
 
 /**
  * Servlet implementation class SubjectWiseRankServlet
@@ -33,7 +33,7 @@ public class SubjectWiseRankServlet extends HttpServlet {
 		String errorMessage = "";
 		String status = "";
 		try {
-			list = new UserFeatureService().findBySubjectCodeService(subCode);
+			list = new UserService().findBySubjectCodeService(subCode);
 			status = "success";
 		} catch (ServiceException e) {
 			errorMessage = e.getMessage();

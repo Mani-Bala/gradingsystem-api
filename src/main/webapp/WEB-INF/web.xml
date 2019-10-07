@@ -64,6 +64,18 @@
   	<description></description>
   	<servlet-class>com.revature.gradingsystem.servlet.GradeWiseListServlet</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>EmployeeServlet</servlet-name>
+  	<display-name>EmployeeServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.revature.gradingsystem.servlet.EmployeeServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>UpdateEmployeeServlet</servlet-name>
+  	<display-name>UpdateEmployeeServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.revature.gradingsystem.servlet.UpdateEmployeeServlet</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>AdminLoginServlet</servlet-name>
   	<url-pattern>/AdminLoginServlet</url-pattern>
@@ -103,5 +115,13 @@
   <servlet-mapping>
   	<servlet-name>GradeWiseListServlet</servlet-name>
   	<url-pattern>/GradeWiseListServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>EmployeeServlet</servlet-name>
+  	<url-pattern>/EmployeeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>UpdateEmployeeServlet</servlet-name>
+  	<url-pattern>/UpdateEmployeeServlet</url-pattern>
   </servlet-mapping>
 </web-app>

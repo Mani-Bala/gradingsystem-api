@@ -15,7 +15,7 @@ import com.revature.gradingsystem.exception.ServiceException;
 import com.revature.gradingsystem.exception.ValidatorException;
 import com.revature.gradingsystem.model.StudentMark;
 import com.revature.gradingsystem.model.Subject;
-import com.revature.gradingsystem.service.UserFeatureService;
+import com.revature.gradingsystem.service.UserService;
 import com.revature.gradingsystem.validator.StudentValidator;
 
 public class UpdateMarkServlet extends HttpServlet {
@@ -86,7 +86,7 @@ public class UpdateMarkServlet extends HttpServlet {
 			list.add(sm4);
 			list.add(sm5);
 
-			new UserFeatureService().updateMarksAndGradeService(regno, list);
+			new UserService().updateMarksAndGradeService(regno, list);
 
 			status = "Success";
 		} catch (ValidatorException e) {

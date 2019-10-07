@@ -18,7 +18,7 @@ public class UserLoginServlet extends HttpServlet {
 
 		String name = request.getParameter("username");
 		String password = request.getParameter("password");
-
+		
 		String json = new LoginController().userLogin(name, password);
 
 		// write the json as a response
